@@ -1,0 +1,18 @@
+<div class="main">
+    <div>
+        <a routerLink="/Home"><img src="https://img.freepik.com/premium-vector/exotic-car-logo-template_73313-447.jpg?w=2000" height="100px" width="100px" style="border: 1px solid black; border-radius: 50%;"></a>
+        <a routerLink="/Home"><span>Exotic Cars</span></a>
+    </div>
+    <div class="m-4">
+        <img src="../../../assets/images.jpg" class="img-fluid">
+    </div>
+    <div class="btn-group" *ngIf="currentUser">
+        <button class="btn btn-danger" (click)="LogoutClick()">Log Out</button>
+        <button class="btn btn-warning bi bi-person" routerLink="/UserProfile">{{currentUser?.FirstName}}</button>
+        <button class="btn btn-danger" routerLink="/cart">Cart</button>
+    </div>
+    <div *ngIf="!currentUser">
+        <button class="btn btn-light me-2" routerLink="/Register">Sign up</button>
+        <button class="btn btn-danger" routerLink="/Login">Log in</button>
+    </div>
+</div>

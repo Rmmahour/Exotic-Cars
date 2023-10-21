@@ -1,0 +1,24 @@
+<div [ngClass]="'dark'">
+    <div class="p-3 text-light text-center">
+        <h1>Grand Total Amount : {{Total| currency:"USD"}}</h1>
+    </div>
+    <div *ngFor="let item of cart; let i=index;" class="d-flex justify-content-center ">
+        <div class="card w-75 bg-dark text-light mt-2 mb-2">
+            <div class="card-header">
+                <h1>{{item.Brand}}</h1>
+                <img class="card-img-top img-fluid" [src]="item.Image" height="450px" width="100%">
+            </div>
+            <div class="card-body">
+                <h2>Model Name : &nbsp;{{item.Model}}</h2>
+                <hr>
+                <h3>Price :&nbsp; {{item.Price| currency:'USD'}}/Day</h3>
+                <h3>From :&nbsp; {{item.From| date:'short'}}</h3>
+                <h3>Days :&nbsp; {{item.Days}}</h3>
+                <h3>Amount :&nbsp; {{item.Amount| currency:'USD'}}</h3>
+            </div>
+            <div class="card-footer">
+                <button (click)="CancelRide(item)" class="btn btn-lg btn-danger">Cancel Ride</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,171 @@
+<div  *ngFor="let user of User; trackBy:trackChange of User" class="bg text-center justify-content-center align-items-center container-fluid">
+    <div class="haze">
+        <h1 class="text-center">My Profile</h1>
+    <hr>
+    <div id="personal" class="text-center">
+        <div>
+            <dl>
+                <dt>First Name</dt>
+                <dd>
+                    {{user.FirstName}}<button class="btn btn-transparent bi bi-pen text-primary" (click)="firstNameEdit()" >edit</button>
+                </dd>
+                <dd *ngIf="isFirst">
+                    <div class="input-group">
+                        <input type="text" [formControl]="FirstName" class="form-control" name="first">
+                        <button *ngIf="FirstName.valid" (click)="FirstNameSave()" class="btn btn-primary">Save</button>
+                    </div>
+                    <span class="text-danger" *ngIf="FirstName?.errors?.['required']">Name Required</span>
+                    <span class="text-danger" *ngIf="FirstName?.errors?.['minlength']" >Name too short</span>
+                </dd>
+                <dt>Date of Birth</dt>
+                <dd>
+                    {{user.Date_Of_Birth}}
+                </dd>
+                <dt>Gender</dt>
+                <dd>
+                    {{user.Gender}}
+                </dd>
+                <dt>Mobile</dt>
+                <dd>
+                    {{user.Mobile | slice:0:3}} {{user.Mobile | slice:3}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="mobileEdit()" >edit</button>
+                </dd>
+                <dd *ngIf="isMobile">
+                    <div class="input-group">
+                        <input type="text" [formControl]="Mobile" class="form-control">
+                        <button *ngIf="Mobile.valid"  (click)="MobileSave()" class="btn btn-primary">Save</button>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <dl>
+                <dt>Last Name</dt>
+                <dd>
+                    {{user.LastName}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="lastNameEdit()" >edit</button>
+                </dd>
+                <dd *ngIf="isLast">
+                    <div class="input-group">
+                        <input type="text" [formControl]="LastName" class="form-control">
+                        <button *ngIf="LastName.valid"  (click)="LastNameSave()" class="btn btn-primary">Save</button>
+                    </div>
+                </dd>
+                <dt>Email Address</dt>
+                <dd>
+                    {{user.Email}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="emailEdit()" >edit</button>
+                </dd>
+                <dd *ngIf="isEmail">
+                    <div class="input-group">
+                        <input type="text" [formControl]="Email" class="form-control">
+                        <button *ngIf="Email.valid"  (click)="EmailSave()" class="btn btn-primary">Save</button>
+                    </div>
+                </dd>
+                <dt>User Id</dt>
+                <dd>
+                    {{user.Userid}}
+                </dd>
+                <dt>Password</dt>
+                <dd>
+                    {{user.Password}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="passwordEdit()" >edit</button>
+                </dd>
+                <dd *ngIf="isPassword">
+                    <div>
+                        <dd>
+                            <input type="password" class="form-control" [formControl]="Password" name="Password">
+                        </dd>
+                        <dd class="text-danger" *ngIf="Password?.['invalid']">
+                            <span *ngIf="Password?.errors?.['required']">Password required</span>
+                            <span *ngIf="Password?.errors?.['pattern']">Invalid Password</span>
+                        </dd>
+                        <dt>Password Confirmation:</dt>
+                            <dd>
+                                <input type="password" (keyup)="Passwordkey()" class="form-control" [formControl]="cnfrmPassword" name="cnfrmPassword">
+                            </dd>
+                            <dd *ngIf="PasswordMatch" class="text-danger">Password Didn'd Matched</dd>
+                            <dd class="text-danger" *ngIf="cnfrmPassword?.['invalid']">
+                                <span *ngIf="cnfrmPassword?.errors?.['required']">Password required</span>
+                                <span *ngIf="cnfrmPassword?.errors?.['pattern']">Invalid Password</span>
+                            </dd>
+                            <dd *ngIf="cnfrmPassword.valid">
+                                <button (click)="PasswordSave()" class="btn btn-primary">Save</button>
+                            </dd>
+                    </div>
+                </dd>
+                <!-- <dd>
+                    {{user.Password}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="passwordEdit()" >edit</button>
+                </dd>
+                <dd *ngIf="isPassword">
+                    <div class="input-group">
+                        <input type="text" [formControl]="Password" class="form-control">
+                        <button (click)="PasswordSave()" class="btn btn-primary">Save</button>
+                    </div>
+                </dd> -->
+            </dl>
+        </div>
+    </div>
+    <hr>
+    <div style="display: flex; justify-content: center;">
+        <dl class="col-4 text-center">
+            <dt>Street</dt>
+            <dd>
+                {{user.Street}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="streetEdit()" >edit</button>
+            </dd>
+            <dd *ngIf="isStreet">
+                <div class="input-group">
+                    <input type="text" [formControl]="Street" class="form-control">
+                    <button  *ngIf="Street.valid" (click)="StreetSave()" class="btn btn-primary">Save</button>
+                </div>
+            </dd>
+            <dt>Pincode</dt>
+            <dd>
+                {{user.Pincode}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="pincodeEdit()" >edit</button>
+            </dd>
+            <dd *ngIf="isPincode">
+                <div  class="input-group">
+                    <input type="text" [formControl]="Pincode" class="form-control">
+                    <button  *ngIf="Pincode.valid" (click)="PinSave()" class="btn btn-primary">Save</button>
+                </div>
+            </dd>
+            <dt>City</dt>
+            <dd>
+                {{user.City}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="cityEdit()" >edit</button>
+            </dd>
+            <dd *ngIf="isCity">
+                <div class="input-group">
+                    <input type="text" [formControl]="City" class="form-control">
+                    <button  *ngIf="City.valid" (click)="CitySave()" class="btn btn-primary">Save</button>
+                </div>
+            </dd>
+            <dt>State</dt>
+            <dd>
+                {{user.State}} &nbsp;<button class="btn btn-transparent bi bi-pen text-primary" (click)="stateEdit()" >edit</button>
+            </dd>
+            <dd *ngIf="isState">
+                <div class="input-group">
+                    <input type="text" [formControl]="State" class="form-control">
+                    <button  *ngIf="State.valid" (click)="StateSave()" class="btn btn-primary">Save</button>
+                </div>
+            </dd>
+            <dt>Country</dt>
+            <dd>
+                {{user.Country}}
+            </dd>
+        </dl>
+    </div>
+
+    <div class="d-flex flex-wrap text-center justify-content-around" style="background-color: gray;">
+        <div *ngFor="let car of cars" style="width: 47.9%;" class="card m-2 p-2 justify-content-around">
+            <div class="card-header">
+                <h1>{{car.Brand}}</h1>
+                <img class="card-img-top" [src]="car.Image" height="450px" width="100%">
+            </div>
+            <div class="card-body">
+                <h2>{{car.Model}}</h2>
+                <h3>&#8377; {{car.Price}}/Day</h3>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-lg w-50 btn-danger">Book Ride</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

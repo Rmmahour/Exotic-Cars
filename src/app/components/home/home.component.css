@@ -1,0 +1,95 @@
+.bg{
+    background-image: url("https://wallpaperset.com/w/full/3/b/6/263742.jpg");
+    width: auto;
+    background-repeat: no-repeat;
+    position: center;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    padding-top: 10%;
+    padding-bottom: 15%;
+    height:max-content;
+}
+
+p{
+    font-size: large !important;
+}
+
+.brand{
+    height: 100px;
+    display: inline-block;
+    color: gold;
+    text-align: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+span{
+    color: gold;
+    font-size: auto;
+    align-items: center;
+    font-weight: bold;
+}
+
+li{
+    padding: 5px;
+    list-style: none;
+    font-size: x-large;
+    font-style: italic;
+    margin: 15px;
+}
+
+address{
+    background-color: black;
+    color: #fff;
+    margin-top: -15px;
+    margin-bottom: -15px;
+}
+
+.add{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h1{
+    font-size: 40px;
+}
+
+dt{
+    font-weight: normal;
+    font-size: xx-large;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+dd{
+    font-weight: normal;
+    font-size: x-large;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.card{
+    width: 379px;
+    margin: 5px;
+}

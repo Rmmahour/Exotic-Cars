@@ -1,0 +1,54 @@
+input.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 5px 5px 5px red;
+}
+
+.card{
+    background-color: black;
+    color: #fff;
+}
+
+input.ng-invalid{
+    box-shadow: 5px 5px 5px red;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 5px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: larger; 
+}
+
+td{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: auto !important; 
+}
+table{
+    width: auto;
+}
+
+.modal-body div{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: xx-large;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+}
+
+span{
+    padding: 10px;
+}

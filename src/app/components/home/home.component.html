@@ -1,0 +1,69 @@
+<div style="background-image: url('https://cdn.wallpapersafari.com/69/56/C7EO6N.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center;" class="container-fluid">
+    <div class="main">
+        <div>
+            <img src="https://img.freepik.com/premium-vector/exotic-car-logo-template_73313-447.jpg?w=2000" height="150px" width="150px" style="float: left; border-radius: 100px;">
+        </div>
+        <div class="brand">Exotic Cars
+            <p [ngClass]="['text-light','text-center','mt-3']">Live your Dreams</p>
+        </div>
+        <div>
+            <ul class="text-light text-wrap">
+                <li><span>&#9734;</span> We administered you the best car rental service</li>
+                <li><span>&#9734;</span> Experience best with us</li>
+                <li><span>&#9734;</span> Cars available for your drive</li>
+                <li><span>&#9734;</span> Try something new</li>
+                <li><span>&#9734;</span> Your satisfaction is our main aim</li>
+                <li><span>&#9734;</span> Dedication for your every turn</li>
+                <li><span>&#9734;</span> Drive with our car</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="background-color: black;" class="container-fluid">
+    <div class="d-flex flex-wrap justify-content-center">
+        <div *ngFor="let brand of brands" class="card p-2 text-center">
+            <a routerLink="{{brand.Brand}}">
+            <div class="card-header">
+                <img [src]="brand.Image" class="card-img-top img-fluid">
+            </div>
+            <div class="card-body">
+                <h1>{{brand.Brand}}</h1>
+            </div>
+            </a>
+        </div>
+    </div>
+</div>
+<address class="text-center">
+    <hr>
+    <h1 class="text-center p-2 mt-4">Address : </h1>
+    <div class="add">
+        <div>
+            <dl>
+                <dt>Country:</dt>
+                <dd>India</dd>
+                <hr>
+                <dt>City:</dt>
+                <dd>Faridabad</dd>
+            </dl>
+        </div>
+        <div>
+            <dl>
+                <dt>State:</dt>
+                <dd>Haryana</dd>
+                <hr>
+                <dt>Pin Code:</dt>
+                <dd>121001</dd>
+            </dl>
+        </div>
+        <div>
+            <dl>
+                <dt>District:</dt>
+                <dd>Faridabad</dd>
+                <hr>
+                <dt>Plot No.</dt>
+                <dd>14/3 Havells Compound, Delhi-Mathura Road</dd>
+            </dl>
+        </div>
+    </div>
+    <hr>
+</address>

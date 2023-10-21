@@ -1,0 +1,16 @@
+<div class="bg-dark navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <a routerLink="/Home" class="navbar-brand"><img src="https://img.freepik.com/premium-vector/exotic-car-logo-template_73313-447.jpg?w=2000" height="80px" width="80px" style="border-radius: 80%;"></a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-1"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="navbar-1">
+            <span class="navbar-nav text-light justify-content-around">
+                <button (click)="FilterButtonClicked($event)" class="btn btn-dark" name="Home" routerLink="/Home">Home</button>
+                <button (click)="FilterButtonClicked($event)" class="btn btn-dark" name="All" routerLink="/All">All Cars</button>
+                <button (click)="FilterButtonClicked($event)" class="btn btn-dark" name="Ferrari" routerLink="/Ferrari">Ferrari</button>
+                <button (click)="FilterButtonClicked($event)" class="btn btn-dark" name="Maserati" routerLink="/Maserati">Maserati</button>
+                <button (click)="FilterButtonClicked($event)" class="btn btn-dark" name="Buggatti" routerLink="/Buggatti">Buggatti</button>
+                <button (click)="FilterButtonClicked($event)" class="btn btn-dark" name="Lamborghini" routerLink="/Lamborghini">Lamborghini</button>
+            </span>
+        </div>
+    </div>
+</div>

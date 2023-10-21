@@ -1,0 +1,22 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    height: auto !important;
+    padding-bottom: 30px;
+}
+
+span{
+    color: gold;
+    font-size: xx-large;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}

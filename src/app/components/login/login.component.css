@@ -1,0 +1,44 @@
+/* .loginform{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 800px;
+} */
+
+.flex{
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.mid{
+    text-align: center;
+    /* background-color: black; */
+    /* color: #fff; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+dt{
+    padding: 10px;
+    font-size: xx-large;
+}
+h1{
+    font-size: xx-large;
+}
+
+form{
+    background-color: lightgray;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10%;
+}

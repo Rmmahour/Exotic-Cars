@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "exoticcars729": {
+      "hosting": {
+        "Exotic": [
+          "exoticcars729"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "exoticcars729"
+  }
+}

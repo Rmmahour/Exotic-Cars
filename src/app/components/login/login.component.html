@@ -1,0 +1,22 @@
+<div [ngClass]="'mid'">
+    <div class="w-50">
+        <img src="https://www.wallpaperflare.com/static/417/193/144/sports-car-front-view-supercar-style-wallpaper.jpg" class="img-fluid" style="float: left;">
+    </div>
+    <div class="m-4 p-4 text-center">
+        <form #frmLogin="ngForm" (submit)="onsubmit()">
+            <h1>Welcome To Log-In Page</h1>
+            <p><font color="red"><b>Note : </b></font>If you are a new user please <a routerLink="/Register">Signup</a> first.</p>
+            <dl class="align-items-center container-fluid">
+                <dt>User Id</dt>
+                <dd>
+                    <input type="text" [(ngModel)]="Userid" placeholder="User ID" name="Userid" id="Userid" class="form-control">
+                </dd>
+                <dt>Password</dt>
+                <dd>
+                    <input type="password" [(ngModel)]="Password" placeholder="User Password" id="Password" name="Password" class="form-control">
+                </dd>
+            </dl>
+            <button (click)="LoggedInClicked()" class="btn btn-primary w-50">Login</button>
+        </form>
+    </div>
+</div>

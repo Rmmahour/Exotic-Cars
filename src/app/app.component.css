@@ -1,0 +1,18 @@
+.bg{
+    background-color: lightgray;
+}
+
+aside{
+    position: fixed;
+    right: 15px;
+    bottom: 0px;
+}
+dt{
+    background-color: transparent;
+    padding: 10px;
+    color: #fff;
+    font-size: 35px;
+}
+/* span{
+    background-color: transparent;
+} */

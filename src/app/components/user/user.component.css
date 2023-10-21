@@ -1,0 +1,39 @@
+.bg{
+    background-image: url(https://media.architecturaldigest.com/photos/5ced629704c41e1a9b9a8bcf/4:3/w_2248,h_1686,c_limit/Bugatti-LVN-7%20%5BBugatti%5D.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    height: auto;
+}
+
+input.ng-invalid{
+    box-shadow: 5px 5px 5px red;
+}
+
+.haze{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: auto;
+}
+
+#personal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+dt{
+    font-size: xx-large;
+    padding: 10px;
+}
+dd{
+    font-size: 20px;
+    padding: 10px;
+}
+
+h1{
+    font-size: 50px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}

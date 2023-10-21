@@ -1,0 +1,75 @@
+<div>
+    <img src="https://www.hdcarwallpapers.com/walls/bugatti_chiron_super_sport_300__prototype_2019_4k_8k-HD.jpg" alt="Buggatti Cars" class="img-fluid" />
+</div>
+<div class="d-flex flex-wrap text-center justify-content-around" style="background-color: gray;">
+    <div *ngFor="let car of cars" style="width: 47.9%;" class="card m-2 p-2 justify-content-around">
+        <div class="card-header">
+            <h1>{{car.Brand}}</h1>
+            <a  href="{{car.Image}}" target="_blank">
+                <img class="card-img-top img-fluid" [src]="car.Image" height="450px" width="100%">
+            </a>
+        </div>
+        <div class="card-body">
+            <h2>{{car.Model}}</h2>
+            <h3>{{car.Price| currency:'USD'}}/Day</h3>
+        </div>
+        <div class="card-footer">
+            <button (click)="RideBook(car.Id)"  data-bs-toggle="modal" data-bs-target="#Carform" class="btn btn-lg btn-danger">Book Ride</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="Carform" >
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <div>
+                    <h1>Fill the Form</h1>
+                </div>
+                <div>
+                    <button type="button" data-bs-dismiss="modal" class="btn btn-close btn-lg"></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <span>Brand : </span>
+                    <span>{{Item.Brand}}</span>
+                </div>
+                <div>
+                    <span>Model : </span>
+                    <span>{{Item.Model}}</span>
+                </div>
+                <div>
+                    <span>
+                        <a  href="{{Item.Image}}" target="_blank">
+                            <img class="card-img-top img-fluid" [src]="Item.Image" height="450px" width="100%">
+                        </a>
+                    </span>
+                </div>
+                <div>
+                    <span>Price : </span>
+                    <span>{{Item.Price| currency:'USD'}}/Day</span>
+                </div>
+                <div>
+                    <span>From : </span>
+                    <span>
+                        <input type='date' class="form-control" [(ngModel)]="Fromvalue" name="From" [min]='fromDateMin'>
+                    </span>
+                </div>
+                <div>
+                    <span>Days : </span>
+                    <span>
+                        <input type='text' size="4" required class="form-control" [(ngModel)]="Daysvalue" (keyup)="days(Item.Id)" name="Days" size="4">
+                    </span>
+                </div>
+                <div>
+                    <span>Amount : </span>
+                    <span>{{Amount | currency:'USD'}}</span>
+                </div>
+            </div>
+            <div class="modla-footer d-flex justify-content-center m-2">
+                <button (click)="confirmRide(Item.Id)" type="button" class="btn btn-dark" data-bs-dismiss="modal">Book For Rent</button>
+            </div>
+        </div>
+    </div>
+</div>
